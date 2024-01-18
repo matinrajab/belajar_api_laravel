@@ -38,6 +38,10 @@ class AuthenticationController extends Controller
 
     public function me(Request $request)
     {
+        // Penggunaan Auth::user() disarankan untuk menampilkan data user yang sedang login, seperti dalam halaman profil atau halaman pengaturan
         return response()->json(Auth::user());
+
+        // Penggunaan $request->user() disarankan untuk memproses data yang dikirimkan oleh pengguna, seperti dalam halaman formulir atau halaman checkout
+        // return response()->json($request->user());
     }
 }

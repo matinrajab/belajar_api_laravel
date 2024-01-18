@@ -57,7 +57,7 @@ class PostController extends Controller
             $extension = $request->file->extension();
             $image = $fileName . '.' . $extension;
 
-            // file akan disimpan pada folder storage/app/image 
+            // file akan disimpan pada folder storage/app/image
             // $request->file adalah file yang disimpan
             Storage::putFileAs('image', $request->file, $image);
         }
@@ -133,7 +133,7 @@ class PostController extends Controller
             $extension = $request->file->extension();
             $image = $fileName . '.' . $extension;
 
-            // file akan disimpan pada folder storage/app/image 
+            // file akan disimpan pada folder storage/app/image
             // $request->file adalah file yang disimpan
             Storage::putFileAs('image', $request->file, $image);
         }
@@ -141,7 +141,7 @@ class PostController extends Controller
         $request['image'] = $image;
         $post->update($request->all());
 
-        // hasil yang ditampilkan jika berhasil update 
+        // hasil yang ditampilkan jika berhasil update
         return new PostDetailResource($post);
     }
 
@@ -160,7 +160,7 @@ class PostController extends Controller
         // hapus data dari database
         $post->delete();
 
-        // hasil yang ditampilkan jika berhasil delete 
+        // hasil yang ditampilkan jika berhasil delete
         return new PostDetailResource($post);
     }
 

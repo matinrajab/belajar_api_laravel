@@ -17,7 +17,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('/post', [PostController::class, 'store']);
     // mengedit postingan
     // beri middleware agar hanya pemilik postingan yang dapat mengupdate postingannya
-    Route::patch('/post/{id}', [PostController::class, 'update'])->middleware('pemilik-postingan');
+    Route::put('/post/{id}', [PostController::class, 'update'])->middleware('pemilik-postingan');
     // menghapus postingan
     // beri middleware agar hanya pemilik postingan yang dapat menghapus postingannya
     Route::delete('/post/{id}', [PostController::class, 'destroy'])->middleware('pemilik-postingan');

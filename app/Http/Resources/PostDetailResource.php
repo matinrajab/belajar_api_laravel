@@ -14,7 +14,7 @@ class PostDetailResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        // jika tidak kita apa"kan, maka yang dikembalikan otomatis dari modelnya 
+        // jika tidak kita apa"kan, maka yang dikembalikan otomatis dari modelnya
         // return parent::toArray($request);
 
         return [
